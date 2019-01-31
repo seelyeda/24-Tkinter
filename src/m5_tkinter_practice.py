@@ -3,7 +3,7 @@ This project lets you try out Tkinter/Ttk and practice it!
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
+         and Dave Seelye.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import tkinter
@@ -16,6 +16,7 @@ def main():
     # TODO: 2. After reading and understanding the m1e module,
     #   ** make a window that shows up. **
     # -------------------------------------------------------------------------
+    window = tkinter.Tk()
 
     # -------------------------------------------------------------------------
     # TODO: 3. After reading and understanding the m2e module,
@@ -69,7 +70,7 @@ def main():
     # -------------------------------------------------------------------------
     # TODO: 8. As time permits, do other interesting GUI things!
     # -------------------------------------------------------------------------
-
+    window.mainloop()
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
