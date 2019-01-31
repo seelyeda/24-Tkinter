@@ -22,18 +22,20 @@ def main():
     # TODO: 3. After reading and understanding the m2e module,
     #   ** put a Frame on the window. **
     # -------------------------------------------------------------------------
-
+    frame1 = ttk.Frame(window, padding=50)
+    frame1.grid()
     # -------------------------------------------------------------------------
     # TODO: 4. After reading and understanding the m2e module,
     #   ** put a Button on the Frame. **
     # -------------------------------------------------------------------------
-
+    go_forward_button = ttk.Button(frame1, text='Hello')
+    go_forward_button.grid()
     # -------------------------------------------------------------------------
     # TODO: 5. After reading and understanding the m3e module,
     #   ** make your Button respond to a button-press **
     #   ** by printing   "Hello"  on the Console.     **
     # -------------------------------------------------------------------------
-
+    go_forward_button['command'] = lambda: print('Sup Lil G')
     # -------------------------------------------------------------------------
     # TODO: 6. After reading and understanding the m4e module,
     #   -- Put an Entry box on the Frame.
@@ -42,7 +44,13 @@ def main():
     #        on the Console if the current string in the Entry box
     #        is the string 'ok', but print "Goodbye" otherwise.
     # -------------------------------------------------------------------------
-
+    entry_box = ttk.Entry(frame1)
+    entry_box.grid()
+    print_entry_button = ttk.Button(frame1, text='Print entry')
+    contents_of_entry_box = entry_box.get()
+    print_entry_button['command'] = (lambda:
+                                     print(contents_of_entry_box))
+    print_entry_button.grid()
     # -------------------------------------------------------------------------
     # TODO: 7.
     #    -- Put a second Entry on the Frame.
