@@ -10,6 +10,11 @@ import tkinter
 from tkinter import ttk
 
 
+def print_contents(entry_box):
+    contents_of_entry_box = entry_box.get()
+    print(contents_of_entry_box)
+
+
 def main():
     """ Constructs a GUI with stuff on it. """
     # -------------------------------------------------------------------------
@@ -44,12 +49,11 @@ def main():
     #        on the Console if the current string in the Entry box
     #        is the string 'ok', but print "Goodbye" otherwise.
     # -------------------------------------------------------------------------
-    entry_box = ttk.Entry(frame1)
-    entry_box.grid()
+    my_entry_box = ttk.Entry(frame1)
+    my_entry_box.grid()
     print_entry_button = ttk.Button(frame1, text='Print entry')
-    contents_of_entry_box = entry_box.get()
     print_entry_button['command'] = (lambda:
-                                     print(contents_of_entry_box))
+                                     print_contents(my_entry_box))
     print_entry_button.grid()
     # -------------------------------------------------------------------------
     # TODO: 7.

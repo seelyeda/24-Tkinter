@@ -16,6 +16,10 @@ from tkinter import ttk
 import random
 
 
+def print_contents(entry_box):
+    contents_of_entry_box = entry_box.get()
+    print(contents_of_entry_box)
+
 def main():
     root = tkinter.Tk()
 
